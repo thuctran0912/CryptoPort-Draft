@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add Crypto Transaction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+	<h1>Add Crypto</h1>
+	<div>
+		<form th:object = "${crypto}" th:action = "@{add}" action="#" method = "post">
+			<label for="name">Name</label>
+			<input type="text" id="name" th:field = "*{name}"/>
+			
+			<label for="code">Code</label>
+			<input type="text" id="code" th:field = "*{code}"/>
+			
+			<label for="boughtPrice">Bought Price</label>
+			<input type="number" step= "0.01" id="price" th:field = "*{boughtPrice}"/>
+			
+			<label for="quantity">Quantity</label>
+			<input type="number" step= "0.01" id="quantity" th:field = "*{quantity}"/>
+			
+			<label for="dateBought">Date Bought</label>
+			<input type="text" id="dateBought" th:field = "*{dateBought}"/>
+			
+			<input type="submit" value="Add"></input>
+			
+			</form>
+	</div>
+</body>
+</html>
+		
+		
